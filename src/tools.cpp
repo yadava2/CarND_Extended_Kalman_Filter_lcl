@@ -19,17 +19,17 @@ VectorXd Tools::CalculateRMSE(const vector<VectorXd> &estimations,
   TODO:
     * Calculate the RMSE here.
   */
-	vectorXd rmse(4);
+	VectorXd rmse(4);
 	rmse << 0,0,0,0;
 
 	// checking the estimation vector validity
 
-	if (estimation.size() != ground_thruth.size()){
+	if (estimations.size() != ground_truth.size()){
 		std::cout<<"Invalid estimation or ground_truth, data different size"<<std::endl;
 				return rmse;
 	}
 
-	if(estimation.size() == 0){
+	if(estimations.size() == 0){
 		std::cout<<"Empty Input!"<<std::endl;
 		return rmse;
 	}
