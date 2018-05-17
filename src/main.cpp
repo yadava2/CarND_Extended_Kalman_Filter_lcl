@@ -136,6 +136,7 @@ int main()
           auto msg = "42[\"estimate_marker\"," + msgJson.dump() + "]";
           // std::cout << msg << std::endl;
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
+          cout<<"RMSE : [ "<<RMSE(0)<<" : "<<RMSE(1)<<" : "<<RMSE(2)<<" : "<<RMSE(3)<<" ]"<<endl;
 	  
         }
       } else {
